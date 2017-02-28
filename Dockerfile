@@ -1,4 +1,4 @@
-FROM resin/armv7hf-debian:jessie
+FROM container4armhf/armhf-alpine
 
 ENV QEMU_EXECVE 1
 

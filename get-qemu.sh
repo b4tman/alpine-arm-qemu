@@ -1,8 +1,8 @@
 #!/bin/sh -ex
 
-QEMU_RELEASE_TAG="qemu-2.5.0-resin-rc3-arm"
-QEMU_RELEASE_FILE="qemu-2.5.0-resin-rc3-arm.tar.gz"
-QEMU_RELEASE_SHA256="107f0585f2b98a149b0ff013ec068ac24c6cfc402cd438b6da5251406bcd564c"
+QEMU_RELEASE_TAG="v2.9.0+resin1"
+QEMU_RELEASE_FILE="qemu-2.9.0.resin1-arm.tar.gz"
+QEMU_RELEASE_SHA256="b39d6a878c013abb24f4cccc7c3a79829546ae365069d5712142a4ad21bcb91b"
 
 QEMU_URL="https://github.com/resin-io/qemu/releases/download/${QEMU_RELEASE_TAG}/${QEMU_RELEASE_FILE}"
 curl -fsSL  ${QEMU_URL} -o ${QEMU_RELEASE_FILE}

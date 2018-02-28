@@ -1,4 +1,4 @@
-FROM container4armhf/armhf-alpine
+FROM arm32v6/alpine:3.7
 
 ENV QEMU_EXECVE 1
 

@@ -20,7 +20,7 @@ RUN echo "${QEMU_RELEASE_SHA256}  ${QEMU_RELEASE_FILE}" > ${QEMU_RELEASE_FILE}.s
 
 RUN tar --strip 1 -xzf ${QEMU_RELEASE_FILE}
 
-FROM arm32v6/alpine
+FROM arm32v6/alpine:3.8
 
 ENV QEMU_EXECVE 1
 

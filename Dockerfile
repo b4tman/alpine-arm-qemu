@@ -1,4 +1,4 @@
-FROM golang:alpine as build
+FROM golang:1.12.6-alpine3.9 as build
 
 WORKDIR /tmp/build
 
@@ -20,7 +20,7 @@ RUN echo "${QEMU_RELEASE_SHA256}  ${QEMU_RELEASE_FILE}" > ${QEMU_RELEASE_FILE}.s
 
 RUN tar --strip 1 -xzf ${QEMU_RELEASE_FILE}
 
-FROM arm32v6/alpine
+FROM arm32v7/alpine:3.9.4
 
 ENV QEMU_EXECVE 1
 

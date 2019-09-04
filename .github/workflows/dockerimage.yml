@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches:
+    - master
+    - edge
+  pull_request:
+    branches:
+    - master
+    - edge
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-18.04
+ 
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag b4tman/armhf-alpine-qemu:$(date +%s)
